@@ -37,6 +37,12 @@ function sendForm() {
 
     // Amostragem de Meses
     var mesesAtual = parseFloat(valorMes - mesAtual);
+
+    if (mesesAtual === 1) {
+        console.log('bateu')
+    }
+
+    //Transforma o número negativo em positivo
     if (mesesAtual < 0) {
         var mesesConvertido = Math.abs(mesesAtual);
         var displayMeses = document.querySelector('#resultado-meses');
@@ -46,12 +52,18 @@ function sendForm() {
         displayMeses.innerHTML = mesesAtual;
     }
 
+    if (mesesAtual === 1) {
+        console.log('bateu aqui tb')
+    }
+
     // Amostragem de Dias
     var diasAtuais = parseFloat(diaAtual - valorDia);
+    //Transforma o número negativo em positivo
     if (diasAtuais < 0) {
         var diasConvertido = Math.abs(diasAtuais);
         var displayDias = document.querySelector('#resultado-dias');
         displayDias.innerHTML = diasConvertido;
+
     } else {
         var displayDias = document.querySelector('#resultado-dias');
         displayDias.innerHTML = diasAtuais;
@@ -76,14 +88,3 @@ function sendForm() {
         document.querySelector('#error-msg-ano').innerHTML = 'Insira um ano válido';
     }
 }
-
-// Evento de clique no botão de enviar
-document.querySelector('#seu-botao-enviar').addEventListener('click', function () {
-    // Preencha os campos dos inputs
-    document.querySelector('#dia-entrada').value = 'seu-valor-dia';
-    document.querySelector('#mes-entrada').value = 'seu-valor-mes';
-    document.querySelector('#ano-entrada').value = 'seu-valor-ano';
-
-    // Chame a função para enviar o formulário
-    sendForm();
-});

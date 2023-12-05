@@ -129,7 +129,8 @@ span {
     color: hsl(259, 100%, 65%);
 }
 
-.singular-mes {
+.singular-mes,
+.singular-dia {
     display: flex;
     gap: 20px;
 }
