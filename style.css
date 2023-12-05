@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;0,800;1,400;1,700;1,800&display=swap');
+
+*{
+    margin: 0;padding: 0;
+}
+
+.attribution{ 
+    font-size: 11px; 
+    text-align: center;
+}
+
+.attribution a{ 
+    color: hsl(228, 45%, 44%);
+}
+
+.to-the-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(0deg, rgba(240,240,240,1) 0%, rgba(219,219,219,1) 100%);
+    width: 100vw;
+    height: 95vh;
+}
+
+.container{
+    background-color: hsl(0, 94%, 28%);
+    height: 510px;
+    width: 610px;
+    border-radius: 20px;
+    border-bottom-right-radius: 140px;
+}
+
+.form-container{
+    display: flex;
+    margin: 20px 20px 0 20px;
+    gap: 55px;
+}
+
+.form-dia, .form-mes, .form-ano{
+    display: flex;
+    flex-direction: column;
+}
+
+.line-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.line-divider{
+    height: 1px;
+    width: 80%;
+    background-color: blue;
+}
+
+a{
+    cursor: pointer;
+}
+
+.btn-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 65px;
+    width: 65px;
+    background-color: hsl(259, 100%, 65%);
+    border-radius: 50%;
+}
+img{
+    width: 40px;
+}
+.btn-div:active{
+    background-color: hsl(0, 0%, 8%);
+}
+
+.resposta-form{
+    background-color: rgb(233, 0, 0);
+    margin-left: 20px;
+}
+
+label{
+    text-transform: uppercase;
+    color: hsl(0, 1%, 44%);
+    font-family: 'Poppins';
+    font-weight: bold;
+}
+
+input{
+    font-family: 'Poppins';
+    font-weight: bold;
+    padding: 10px;
+    width: 95px;
+    border: none;
+    border-radius: 5px;
+    font-size: 32px;
+}
+
+input:focus{
+    border: solid 1px hsl(259, 100%, 65%);
+    outline: none;
+}
+
+p, span{
+    font-family: 'Poppins';
+    font-weight: bolder;
+    font-style: italic;
+    font-size: 70px;
+}
+
+span{
+    color: hsl(259, 100%, 65%);
+}
+
+.singular-mes{
+    display: flex;
+    gap: 20px;
+}
