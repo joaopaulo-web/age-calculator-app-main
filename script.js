@@ -38,35 +38,42 @@ function sendForm() {
     // Amostragem de Meses
     var mesesAtual = parseFloat(valorMes - mesAtual);
 
-    if (mesesAtual === 1) {
-        console.log('bateu')
-    }
-
-    //Transforma o número negativo em positivo
+    //Transforma o número negativo em positivo e valida se o resultado escrito será no singular ou no plural
     if (mesesAtual < 0) {
+
         var mesesConvertido = Math.abs(mesesAtual);
         var displayMeses = document.querySelector('#resultado-meses');
         displayMeses.innerHTML = mesesConvertido;
-    } else {
-        var displayMeses = document.querySelector('#resultado-meses');
-        displayMeses.innerHTML = mesesAtual;
-    }
 
-    if (mesesAtual === 1) {
-        console.log('bateu aqui tb')
+        var mesSingular = document.querySelector('#resposta-meses')
+        mesSingular.innerHTML = 'mês'
+
+        if (mesesConvertido > 1) {
+            var mesSingular = document.querySelector('#resposta-meses')
+            mesSingular.innerHTML = 'meses'
+        }
+
     }
 
     // Amostragem de Dias
-    var diasAtuais = parseFloat(diaAtual - valorDia);
+    var diasAtual = parseFloat(diaAtual - valorDia);
     //Transforma o número negativo em positivo
-    if (diasAtuais < 0) {
-        var diasConvertido = Math.abs(diasAtuais);
+
+    if (diasAtual < 0) {
+
+        var diasConvertido = Math.abs(diasAtual);
         var displayDias = document.querySelector('#resultado-dias');
         displayDias.innerHTML = diasConvertido;
 
-    } else {
-        var displayDias = document.querySelector('#resultado-dias');
-        displayDias.innerHTML = diasAtuais;
+        var diaSingular = document.querySelector('#resposta-dias')
+        diaSingular.innerHTML = 'dia'
+
+        if (diasConvertido > 1) {
+
+            var diaSingular = document.querySelector('#resposta-dias')
+            diaSingular.innerHTML = 'dias'
+        }
+
     }
 
     // Erros de inputs vazios
