@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +12,7 @@
   <title>Frontend Mentor | Age calculator app</title>
 
 </head>
+
 <body onload="hideRespostas()">
   <div class="to-the-center">
     <div class="container">
@@ -18,15 +20,18 @@
         <div class="form-container">
           <div class="form-dia">
             <label for="dia">Dia</label>
-            <input type="number" id="dia-entrada" placeholder="DD" required>
+            <input type="number" id="dia-entrada" class="error" placeholder="DD" required>
+            <p id="error-msg"></p>
           </div>
           <div class="form-mes">
             <label for="mes">Mês</label>
-            <input type="number" id="mes-entrada" placeholder="MM" required>
+            <input type="number" id="mes-entrada" class="error" placeholder="MM" required>
+            <p id="error-msg-mes"></p>
           </div>
           <div class="form-ano">
             <label for="ano">Ano</label>
-            <input type="number" id="ano-entrada" placeholder="AAAA" required>
+            <input type="number" id="ano-entrada" class="error" placeholder="AAAA" required>
+            <p id="error-msg-ano"></p>
           </div>
         </div>
       </form>
@@ -39,16 +44,18 @@
       <div class="resposta-form" id="resposta-form">
         <p class="resposta-anos"><span id="resultado-anos"></span> anos</p>
         <div class="singular-mes">
-          <span id="resultado-meses"> </span> <p class="resposta-meses" id="resposta-meses"> meses</p>
+          <span id="resultado-meses"> </span>
+          <p class="resposta-meses" id="resposta-meses"> meses</p>
         </div>
         <p class="resposta-dias"><span id="resultado-dias"></span> dias</p>
       </div>
     </div>
   </div>
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">João Paulo Dev</a>.
   </div>
   <script src="script.js"></script>
 </body>
+
 </html>
